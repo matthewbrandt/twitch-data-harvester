@@ -1,0 +1,5 @@
+# min hour day month weekday command
+* * * * * /bin/date --rfc-2822 >> /dev/stdout
+*/2 * * * * node /chattersToDB.mjs >> /dev/stdout 2>&1
+*/2 * * * * node /streamToDB.mjs >> /dev/stdout 2>&1
+*/30 * * * * node /usersToDB.mjs >> /dev/stdout 2>&1
